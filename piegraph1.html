@@ -1,0 +1,45 @@
+<script src="js/echarts/dist/echarts.min.js"></script>
+<script src="js/echarts/map/js/world.js"></script>
+<script src="js/echart-custom/custom.js"></script>
+<script src="js/echart-custom/echart-donut-custom.js"></script>
+
+<div class="container">
+<div class="row">
+  <div class="col-sm-12">
+      <div id="echart_donut" style="height: 370px; -moz-user-select: none; position: relative; background-color: transparent;" _echarts_instance_="ec_1533903414624"></div>
+  </div>
+  </div>
+</div>
+</div>
+
+<script>
+$(document).ready(function() {
+
+
+var legendData      =  ['Assalto', 'Arrastão', 'Homicídio'];
+var textTitle       =  "Policiais";
+var subTextTitle    =  "Mortes de Policiais";
+var saveImageTitle  =  "Salvar Imagem";
+
+
+
+
+var seriesDataSet   = [{
+                                value: 335,
+                                name: 'Assalto'
+                                }, {
+                                value: 310,
+                                name: 'Arrastão'
+                                }, {
+                                value: 1548,
+                                name: 'Homicídio'
+                      }];
+
+
+
+
+
+init_echart_donut(theme, legendData, textTitle, subTextTitle, saveImageTitle, seriesDataSet);
+
+});
+</script>

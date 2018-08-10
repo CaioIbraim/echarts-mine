@@ -1,0 +1,45 @@
+<script src="js/echarts/dist/echarts.min.js"></script>
+<script src="js/echarts/map/js/world.js"></script>
+<script src="js/echart-custom/custom.js"></script>
+<script src="js/echart-custom/echart-bar-custom.js"></script>
+
+<div class="container">
+<div class="row">
+  <div class="col-sm-12">
+      <div id="echart_bar_horizontal" style="height: 370px; -moz-user-select: none; position: relative; background-color: transparent;" _echarts_instance_="ec_1533903414624"></div>
+  </div>
+  </div>
+</div>
+</div>
+
+<script>
+$(document).ready(function() {
+
+
+var legendData      =  ['2017','2018'];
+var textTitle       =  "Policiais";
+var subTextTitle    =  "Mortes de Policiais";
+var yAxisData       =  ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'];
+var saveImageTitle  =  "Salvar Imagem";
+
+
+
+
+var seriesDataSet   = [{
+                        name: legendData[0],
+                        type: 'bar',
+                        data: [182, 239, 204, 170, 131, 630]
+                      }, {
+                        name: legendData[1],
+                        type: 'bar',
+                        data: [190, 234, 310, 121, 134, 681]
+                      }];
+
+
+
+
+
+init_echart_bar(theme, legendData, textTitle, subTextTitle, yAxisData, saveImageTitle, seriesDataSet);
+
+});
+</script>
